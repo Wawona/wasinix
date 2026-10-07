@@ -44,6 +44,8 @@
         {
           wasixAll = wasix.allWasm;
           wasmerAll = wasix.wasmer.allWasmer;
+          # Alias used by CI / docs (`nix build .#all`).
+          all = wasix.wasmer.allWasmer;
           default = wasix.allWasm;
 
           cargo-wasix = wasix.toolchains.${wasix.defaultProfileName}.cargoWasix;

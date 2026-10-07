@@ -12,11 +12,15 @@ for Wawona. It is not `nixpkgs2wasi`. Do not revive `n2w`.
 | ABI | Prefer `wasix` metadata; never label WASIX as store `wasi-p1` |
 | Store P1 today | Still built in `Wawona/wasm-packages` allowlist (Pulley / Wasmtime) |
 
-## Build
+## Build + Wasmer smoke
+
+Every active row in `smokes.toml` must pass under **Wasmer** in CI
+(`smoke-wasix-package.sh`). Store P1/P2 uses Wasmtime in `wasm-packages`.
 
 ```bash
 nix build .#wasmer.grep
-nix build .#wasmerAll
+./scripts/smoke-wasix-package.sh grep result/pkg/grep/bin/grep.wasm
+nix build .#wasmerAll   # or .#all
 ```
 
 Plain wasm: `nix build .#wasix.grep`. Wasmer/WebC layout lands under `result/pkg`.
