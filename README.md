@@ -1,3 +1,12 @@
+# Wawona fork
+
+This is **`github.com/Wawona/wasinix`**, forked from `xtyxtyx/wasinix` for the
+Wawona WASIX / WebC publish path. Registry target: `repo.wawona.io/wasm`.
+See [`docs/wawona-publish.md`](docs/wawona-publish.md). Do not revive
+`nixpkgs2wasi` / `n2w`.
+
+---
+
 # WASIX Package Repository
 
 This repository is a Nix flake for building and packaging software for **WASIX**

@@ -2,7 +2,8 @@
 {
   package,
   name ? (package.pname or package.name or "package"),
-  owner ? "wasmer",
+  # Wawona fork default. Upstream wasinix used "wasmer".
+  owner ? "wawona",
   version ? (package.version or "0.0.0"),
   license ? null,
   entrypoint ? null,
